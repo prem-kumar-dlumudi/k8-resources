@@ -1,0 +1,13 @@
+apiVesrion: v1
+kind: Pod
+metadata:
+  name: pod-configmap-demo
+  namespace: roboshop
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    envFrom:
+    - configMapRef: #We have created our config file, now let’s inject it into a pod definition file
+        name: nginx-config-prem
+        
