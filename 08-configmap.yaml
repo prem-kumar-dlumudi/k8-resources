@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: nginx-confi
+  name: nginx-config-prem
 data:
   course: "Kubernetes for orchestration"
   duration: "8 hours"
