@@ -7,6 +7,6 @@ spec:
   containers:
   - name:  almalinux
     image: almalinux
-    comand: ["sleep", "1000"]
+    command: ["sleep", "1000"]
     ports:
     - containerPort: 80  
