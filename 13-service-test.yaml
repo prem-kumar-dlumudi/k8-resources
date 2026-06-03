@@ -5,8 +5,7 @@ metadata:
   namespace: roboshop
 spec:
   containers:
-  - name: almalinux
-    image: almalinux
-    command: ["/bin/sleep", "1000"]
+  - name: nginx
+    image: nginx
     ports:
     - containerPort: 80
