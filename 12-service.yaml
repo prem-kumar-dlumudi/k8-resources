@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+spec:
+  selector:
+  #labels are used to select the pods for which this service will be created
+    project: roboshop
+    component: frontend
+    environment: dev
+  ports:
+  - protocol: TCP 
+    port: 80 #port on which the service will be exposed
+    targetPort: 80 #container port to which the traffic will be forwarded
