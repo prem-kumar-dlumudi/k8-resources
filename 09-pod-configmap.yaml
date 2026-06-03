@@ -1,4 +1,4 @@
-apiVesrion: v1
+apiVersion: v1
 kind: Pod
 metadata:
   name: pod-configmap-demo
@@ -10,4 +10,3 @@ spec:
     envFrom:
     - configMapRef: #We have created our config file, now let’s inject it into a pod definition file
         name: nginx-config-prem
-        
