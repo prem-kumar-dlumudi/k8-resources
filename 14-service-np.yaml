@@ -9,7 +9,7 @@ spec:
     project: roboshop
     component: frontend
     environment: dev
-ports:
+  ports:
   - protocol: TCP 
     port: 80 #port on which the service will be exposed
     targetPort: 80 #container port to which the traffic will be forwarded
