@@ -2,30 +2,33 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: nginx-replicaset
-  labels: #these labels are used to select the pods for which this replicaset will be created
+  labels:
     project: roboshop
-    purpose: replicaset-demo  
+    purpose: replicaset-demo
     component: frontend
     environment: dev
     tier: web
+
 spec:
   replicas: 3
-  selector: #using these labesls replicaset selects the pods.
+
+  selector:
     matchLabels:
       project: roboshop
-      purpose: replicaset-demo  
+      purpose: replicaset-demo
       component: frontend
       environment: dev
       tier: web
-      #this is pod definition, pod is subset of replicaset, this is the template for the pods which will be created by this replicaset
-    template:
+
+  template:
     metadata:
       labels:
         project: roboshop
-        purpose: replicaset-demo  
+        purpose: replicaset-demo
         component: frontend
         environment: dev
         tier: web
+
     spec:
       containers:
       - name: nginx
