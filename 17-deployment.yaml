@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-replicaset
+  labels:
+    project: roboshop
+    purpose: replicaset-demo
+    component: frontend
+    environment: dev
+    tier: web
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      project: roboshop
+      purpose: replicaset-demo
+      component: frontend
+      environment: dev
+      tier: web
+
+  template:
+    metadata:
+      labels:
+        project: roboshop
+        purpose: replicaset-demo
+        component: frontend
+        environment: dev
+        tier: web
+
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:stable-alpine3.23-perl
+      
+        
