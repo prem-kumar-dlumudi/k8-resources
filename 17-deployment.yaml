@@ -8,6 +8,8 @@ metadata:
     component: frontend
     environment: dev
     tier: web
+  annotations:
+    kubernetes.io/change-cause: "Updated the deployment to 1.29" 
 
 spec:
   replicas: 2
@@ -32,6 +34,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:latest
+        image: nginx:1.29
       
         
